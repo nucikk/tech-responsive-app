@@ -1,0 +1,99 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header,
+section,
+footer {
+    width: clamp(6.25rem, 100%, 90rem);
+    margin-inline: auto;
+    font-family: 'Manrope', sans-serif;
+}
+
+.relative {
+    position: relative;
+}
+
+.none {
+    display: none;
+}
+
+/* FONTS STYLE */
+.navigation_headline {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 5.125rem;
+}
+
+.navigation_description {
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+    letter-spacing: .0125rem;
+}
+
+/* Header Section */
+.desktop_banner1,
+.mobile_banner1,
+.ipad_banner1 {
+    position: absolute;
+}
+
+.navigation_warpper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem .0625rem 8.75rem 4.8125rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.login_btn {
+    padding: .625rem 1.25rem;
+    border-radius: .3125rem;
+    background: #F84646;
+}
+
+.navigation_information {
+    width: clamp(6.25rem, 100%, 40.625rem);
+    display: flex;
+    flex-direction: column;
+    gap: 6.375rem;
+}
+
+.header_container {
+    padding: 2.5rem 8.4375rem 0 7.625rem;
+}
+
+.header_container, .desktop_banner1 {
+    width: clamp(6.25rem, 100%, 90rem);
+}
+
+
+/*Media Query 1024px (headline section) */
+@media only screen and (max-width: 64rem) {
+    .ipad_banner1 {
+        display: block;
+    }
+
+    .navigation_warpper {
+        justify-content:flex-end;
+        gap: 7.5rem;
+    }
+
+    .header_container {
+        padding: 2.1875rem 7.3125rem;    
+    }
+    .navigation_information {
+        gap: 5.8125rem;
+    }
+}
+
+
+@media only screen and (min-width: 375px) and  (max-width: 944px) {
+    .header_container {
+        display: none;
+    }
+}
