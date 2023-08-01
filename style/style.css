@@ -23,7 +23,11 @@ header {
 .mobile_banner1,
 .burger_icon,
 .nav_text,
-.ipad_banner1 {
+.ipad_banner1,
+.meet_img2,
+.user_img2,
+.meet_img3,
+.user_img3 {
     display: none;
 }
 
@@ -105,9 +109,10 @@ header {
     width: clamp(23.4375rem, 100%, 90rem);
 }
 
-/* Course Card  Section*/ 
+/* Course Card  Section*/
 .course_card_section,
-.course_card {
+.course_card,
+.register_section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,8 +147,43 @@ header {
     text-align: center;
 }
 
+/* Registration Section */
+.registration_container {
+    width: clamp(23.4375rem, 100%, 1197px);
+    height: 1080px;
+    margin-top: 174px;
+    background-color: lightgreen;
+}
+
+.registration_container,
+.register_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.register_item {
+    width: clamp(23.4375rem, 100%, 608px);
+    height: 480px;
+    background-color: rgb(180, 197, 239);
+}
+
+.staff_describe {
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.add_button {
+    width: 160px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #F84646;
+}
+
 /*Media Query 1024px (headline section) */
 @media only screen and (max-width: 64rem) {
+
     /* Header Section */
     .ipad_banner1 {
         width: clamp(23.4375rem, 100%, 1024px);
@@ -162,6 +202,7 @@ header {
     .navigation_info {
         gap: 5.8125rem;
     }
+
     /* Course Card  Section*/
     .card_board {
         width: clamp(23.4375rem, 100%, 764px);
@@ -175,6 +216,24 @@ header {
 
     header {
         height: 647px;
+    }
+
+    .register_item {
+        width: clamp(23.4375rem, 100%, 428px)
+    }
+
+    .user_img1,
+    .meet_img1 {
+        display: none;
+    }
+
+    .meet_img2,
+    .user_img2 {
+        display: block;
+    }
+
+    .registration_container {
+        width: 90%;
     }
 }
 
@@ -202,17 +261,24 @@ header {
 
 /*Media Query 375px */
 @media only screen and (max-width: 23.4375rem) {
+
     /* Header section */
     .header_content_container,
     .mobile_banner1,
     .burger_icon,
-    .nav_text {
+    .nav_text,
+    .user_img2,
+    .meet_img3,
+    .user_img3 {
         display: block;
     }
 
     .navigation_bar,
     .ipad_banner1,
-    .navigation_description {
+    .navigation_description,
+    .user_img1,
+    .meet_img2,
+    .user_img2 {
         display: none;
     }
 
@@ -237,6 +303,7 @@ header {
     .nav_text {
         width: clamp(6.25rem, 100%, 322px);
     }
+
     /* Course Card  Section*/
     .card_board {
         gap: 80px;
@@ -252,6 +319,19 @@ header {
     .card_board,
     .course_card {
         height: 1665px;
+    }
+
+    .register_item {
+        height: 577px;
+        text-align: center;
+        align-content: space-around;
+    }
+
+    .add_button {
+        width: 338px;
+        padding: 12px;
+        height: 84px;
+        margin: 40px 0 0px;
     }
 
 }
