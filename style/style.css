@@ -10,25 +10,53 @@ footer {
     font-family: 'Manrope', sans-serif;
 }
 
+header {
+    height: 754px;
+
+}
+
 .relative {
     position: relative;
 }
 
-.none {
+.none,
+.mobile_banner1,
+.burger_icon,
+.nav_text,
+.ipad_banner1 {
     display: none;
 }
 
 /* FONTS STYLE */
-.navigation_headline {
+.navigation_heading {
     font-size: 4rem;
     font-weight: 800;
     line-height: 5.125rem;
 }
 
-.navigation_description {
+.navigation_description,
+.nav_text {
     font-size: 1.25rem;
     line-height: 2.25rem;
     letter-spacing: .0125rem;
+}
+
+.card_title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.card_describe {
+    font-size: 24px;
+    line-height: 39.5px;
+    letter-spacing: 0.2px;
+}
+
+.card_about {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
 }
 
 /* Header Section */
@@ -45,55 +73,185 @@ footer {
     margin: 0rem .0625rem 8.75rem 4.8125rem;
 }
 
-nav ul {
+.navigation_bar,
+.nav_links {
     display: flex;
     gap: 2.5rem;
 }
 
-.login_btn {
+.login_button {
     padding: .625rem 1.25rem;
     border-radius: .3125rem;
     background: #F84646;
 }
 
-.navigation_information {
+.navigation_info {
     width: clamp(6.25rem, 100%, 40.625rem);
     display: flex;
     flex-direction: column;
     gap: 6.375rem;
 }
 
-.header_container {
+.header_content_container {
     padding: 2.5rem 8.4375rem 0 7.625rem;
 }
 
-.header_container, .desktop_banner1 {
+.header_content_container,
+.desktop_banner1 {
     width: clamp(6.25rem, 100%, 90rem);
 }
 
+.desktop_banner1 {
+    width: clamp(23.4375rem, 100%, 90rem);
+}
+
+/* Course Card  Section*/ 
+.course_card_section,
+.course_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.course_card {
+    position: relative;
+    width: clamp(23.4375rem, 100%, 1163px);
+    height: 802px;
+    gap: 100px;
+}
+
+.card_details {
+    width: clamp(23.4375rem, 100%, 994px);
+    height: 195px;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.card_board {
+    width: clamp(23.4375rem, 100%, 994px);
+    height: 508px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.board_box {
+    width: 298px;
+    text-align: center;
+}
 
 /*Media Query 1024px (headline section) */
 @media only screen and (max-width: 64rem) {
+    /* Header Section */
     .ipad_banner1 {
+        width: clamp(23.4375rem, 100%, 1024px);
         display: block;
     }
 
     .navigation_warpper {
-        justify-content:flex-end;
+        justify-content: flex-end;
         gap: 7.5rem;
     }
 
-    .header_container {
-        padding: 2.1875rem 7.3125rem;    
+    .header_content_container {
+        padding: 2.1875rem 7.3125rem;
     }
-    .navigation_information {
+
+    .navigation_info {
         gap: 5.8125rem;
+    }
+    /* Course Card  Section*/
+    .card_board {
+        width: clamp(23.4375rem, 100%, 764px);
+        flex-wrap: wrap;
+        height: 1149.716px;
+    }
+
+    .course_card {
+        height: 1149.716px;
+    }
+
+    header {
+        height: 647px;
     }
 }
 
 
-@media only screen and (min-width: 375px) and  (max-width: 944px) {
-    .header_container {
+/*Media Query 1035px */
+@media only screen and (min-width: 378px) and (max-width: 1023px) {
+
+    .header_content_container,
+    .navigation_info {
         display: none;
     }
+
+    .course_card {
+        margin: 40px auto;
+    }
+
+    header {
+        height: 338px;
+    }
+
+    .card_board {
+        justify-content: center;
+    }
+}
+
+/*Media Query 375px */
+@media only screen and (max-width: 23.4375rem) {
+    /* Header section */
+    .header_content_container,
+    .mobile_banner1,
+    .burger_icon,
+    .nav_text {
+        display: block;
+    }
+
+    .navigation_bar,
+    .ipad_banner1,
+    .navigation_description {
+        display: none;
+    }
+
+    .header_content_container {
+        padding: 2.1875rem 1.25rem;
+    }
+
+    .navigation_warpper {
+        margin: 0 0 4.125rem 0;
+        justify-content: space-between;
+    }
+
+    .navigation_info {
+        gap: 7.1875rem;
+        text-align: center;
+    }
+
+    .navigation_heading {
+        font-size: 2.625rem;
+    }
+
+    .nav_text {
+        width: clamp(6.25rem, 100%, 322px);
+    }
+    /* Course Card  Section*/
+    .card_board {
+        gap: 80px;
+        justify-content: center;
+    }
+
+    .card_describe {
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.2px;
+    }
+
+    .card_board,
+    .course_card {
+        height: 1665px;
+    }
+
 }
