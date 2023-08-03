@@ -11,7 +11,7 @@ footer {
 }
 
 header {
-    height: 754px;
+    min-height: 754px;
 
 }
 
@@ -46,21 +46,21 @@ header {
 }
 
 .card_title {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .card_describe {
-    font-size: 24px;
-    line-height: 39.5px;
-    letter-spacing: 0.2px;
+    font-size: 1.5rem;
+    line-height: 2.4688rem;
+    letter-spacing: .0125rem;
 }
 
 .card_about {
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.2px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: .0125rem;
 }
 
 /* Header Section */
@@ -112,7 +112,8 @@ header {
 /* Course Card  Section*/
 .course_card_section,
 .course_card,
-.register_section {
+.register_section,
+.footer_section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,21 +122,21 @@ header {
 
 .course_card {
     position: relative;
-    width: clamp(23.4375rem, 100%, 1163px);
-    height: 802px;
-    gap: 100px;
+    width: clamp(23.4375rem, 100%, 72.6875rem);
+    min-height: 50.125rem;
+    /* gap: 6.25rem; */
 }
 
 .card_details {
-    width: clamp(23.4375rem, 100%, 994px);
-    height: 195px;
+    width: clamp(23.4375rem, 100%, 62.125rem);
+    min-height: 12.1875rem;
     margin-inline: auto;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 7.5rem;
 }
 
 .card_board {
-    width: clamp(23.4375rem, 100%, 994px);
+    width: clamp(23.4375rem, 100%, 62.125rem);
     height: 508px;
     display: flex;
     justify-content: space-between;
@@ -143,42 +144,74 @@ header {
 }
 
 .board_box {
-    width: 298px;
+    width: 18.625rem;
     text-align: center;
 }
 
 /* Registration Section */
 .registration_container {
-    width: clamp(23.4375rem, 100%, 1197px);
-    height: 1080px;
-    margin-top: 174px;
-    background-color: lightgreen;
+    width: clamp(23.4375rem, 100%, 74.8125rem);
+    min-height: 67.5rem;
+    /* margin-top: 10.875rem; */
 }
 
 .registration_container,
-.register_item {
+.register_item,
+.mobile_item {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
 }
 
-.register_item {
-    width: clamp(23.4375rem, 100%, 608px);
-    height: 480px;
-    background-color: rgb(180, 197, 239);
+.register_item,
+.mobile_item {
+    width: clamp(23.4375rem, 100%, 38rem);
+    min-height: 30rem;
 }
 
 .staff_describe {
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 2rem;
 }
 
 .add_button {
-    width: 160px;
+    width: 10rem;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: .5rem;
     background: #F84646;
+}
+
+/* Footer Section */
+.footer_section {
+    min-height: 32.4375rem;
+    margin-top: 5.4375rem;
+    color: #E6E6E6;
+    background-color: #F84646;
+}
+
+.footer_container {
+    width: clamp(23.4375rem, 100%, 74.25rem);
+    min-height: 24.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Services_box {
+    max-width: 15.5625rem;
+    height: 18.375rem;
+}
+
+.Services_box li {
+    line-height: 3.6875rem;
+}
+
+.copyright_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*Media Query 1024px (headline section) */
@@ -205,17 +238,17 @@ header {
 
     /* Course Card  Section*/
     .card_board {
-        width: clamp(23.4375rem, 100%, 764px);
+        width: clamp(23.4375rem, 100%, 47.75rem);
         flex-wrap: wrap;
-        height: 1149.716px;
+        height: 71.8572rem;
     }
 
     .course_card {
-        height: 1149.716px;
+        min-height: 71.8572rem;
     }
 
     header {
-        height: 647px;
+        min-height: 646px;
     }
 
     .register_item {
@@ -235,6 +268,29 @@ header {
     .registration_container {
         width: 90%;
     }
+
+    .footer_container {
+        width: 90%;
+
+    }
+
+    .Services_box {
+        width: 184px;
+    }
+
+    .Services_box:nth-child(2) {
+        width: 266px;
+    }
+
+    .copyright_item {
+        height: 3rem;
+
+    }
+
+    .icon_box {
+        display: flex;
+        align-self: end;
+    }
 }
 
 
@@ -247,11 +303,11 @@ header {
     }
 
     .course_card {
-        margin: 40px auto;
+        margin: 2.5rem auto;
     }
 
     header {
-        height: 338px;
+        height: 21.125rem;
     }
 
     .card_board {
@@ -278,7 +334,8 @@ header {
     .navigation_description,
     .user_img1,
     .meet_img2,
-    .user_img2 {
+    .user_img2,
+    .icon_box {
         display: none;
     }
 
@@ -301,12 +358,12 @@ header {
     }
 
     .nav_text {
-        width: clamp(6.25rem, 100%, 322px);
+        width: clamp(6.25rem, 100%, 20.125rem);
     }
 
     /* Course Card  Section*/
     .card_board {
-        gap: 80px;
+        /* gap: 78px; */
         justify-content: center;
     }
 
@@ -318,20 +375,50 @@ header {
 
     .card_board,
     .course_card {
-        height: 1665px;
+        height: 104.0625rem;
+    }
+
+    .card_board {
+        gap: 0px;
     }
 
     .register_item {
-        height: 577px;
+        height: 36.0625rem;
         text-align: center;
         align-content: space-around;
     }
 
-    .add_button {
-        width: 338px;
-        padding: 12px;
-        height: 84px;
-        margin: 40px 0 0px;
+    .registration_container {
+        height: 1724px;
     }
 
+    .add_button {
+        width: 21.125rem;
+        padding: .75rem;
+        height: 5.25rem;
+        margin: 2.5rem 0 0;
+    }
+
+    /* Footer Section */
+    .footer_section,
+    .footer_container {
+        height: 83.75rem;
+    }
+
+    .copyright_item {
+        height: 8.6875rem;
+        align-items: center;
+    }
+
+    .Services_box:nth-child(2) {
+        height: 15.5rem;
+    }
+
+    .Services_box:nth-child(3) {
+        height: 12rem;
+    }
+
+    .Services_box:nth-child(4) {
+        height: 8.5rem;
+    }
 }
